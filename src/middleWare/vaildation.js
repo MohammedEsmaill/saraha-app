@@ -8,12 +8,12 @@ export const validation = (schema) => {
                 const validationError = schema[key].validate(req[key], { abortEarly: false })
                 if (validationError?.error) {
                     validationResult.push(validationError?.error?.details)
-                    console.log(validationError?.error?.details);
-                    
                 }
             }
             if (validationResult.length>0) {
-                return next(new Error("validation error",validationResult,{cause:400}))
+                console.log(result);
+                return res.status(400).json({msg:"validation error",errors:validationResult})
+                // return next(new Error("validation error",{errors:validationResult},{cause:400}))
             }
             next()
         }
