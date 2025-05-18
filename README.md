@@ -37,5 +37,4 @@ Test with any API client (e.g. Postman).
 - 🛡️ **JWT-based Auth** for all private routes
 - 📥 **Send Anonymous Messages** to users
 - 📬 **View Received Messages**
-- 🚫 No need for sender to have an account
 - 📄 Well-structured REST API
